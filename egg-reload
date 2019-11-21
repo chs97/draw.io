@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-11-21T09:33:12.134Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" etag="M4PbXvHv8w1K32BGCgzj" version="12.2.7" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-21T10:51:31.207Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" etag="ioq2_Joe_hZxcP9t7Pzb" version="12.2.7" type="github" pages="1">
   <diagram id="Tn1h8Cq2Dvtc7G6nERlv" name="Page-1">
     <mxGraphModel dx="1828" dy="1045" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -26,7 +26,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-3" value="start ipc-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-3" value="启动 IPC-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="210" y="160" width="130" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xc45zE0VW1UVSJ1MskZp-8" target="Xc45zE0VW1UVSJ1MskZp-19">
@@ -38,8 +38,32 @@
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-19" value="fork 新的 worker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="100" y="330" width="130" height="40" as="geometry"/>
         </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xc45zE0VW1UVSJ1MskZp-2" target="Xc45zE0VW1UVSJ1MskZp-55">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-2" value="reload-command" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="60" width="130" height="40" as="geometry"/>
+          <mxGeometry x="850" y="70" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xc45zE0VW1UVSJ1MskZp-55" target="Xc45zE0VW1UVSJ1MskZp-57">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-55" value="连接 IPC-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="160" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xc45zE0VW1UVSJ1MskZp-57" target="Xc45zE0VW1UVSJ1MskZp-59">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-57" value="发送 reload 消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="245" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xc45zE0VW1UVSJ1MskZp-59" target="Xc45zE0VW1UVSJ1MskZp-62">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-59" value="等待 IPC-server 消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="330" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-62" value="打印重启成功/失败" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="415" width="130" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-5" value="start egg cluster" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="160" width="130" height="40" as="geometry"/>
@@ -74,33 +98,6 @@
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-13" value="fork event" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="235" y="400" width="80" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-33" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="550" y="400" width="214" height="150" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry width="214" height="150" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-23" value="worker 已 listening" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry x="7" y="40" width="87" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-27" value="发送 PID 给reload process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry x="7" y="90" width="87" height="35" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-33" source="Xc45zE0VW1UVSJ1MskZp-23" target="Xc45zE0VW1UVSJ1MskZp-27">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-26" value="listening event" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry x="57" y="10" width="100" height="20" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-29" value="所有新 worker 已 listening" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry x="120.5" y="40" width="87" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-30" value="发送重启成功的消息给 reload process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-33">
-          <mxGeometry x="120.5" y="90" width="87" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="Xc45zE0VW1UVSJ1MskZp-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-33" source="Xc45zE0VW1UVSJ1MskZp-29" target="Xc45zE0VW1UVSJ1MskZp-30">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-48" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="370.5" y="400" width="139" height="195" as="geometry"/>
         </mxCell>
@@ -123,6 +120,39 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="Xc45zE0VW1UVSJ1MskZp-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-48" source="Xc45zE0VW1UVSJ1MskZp-38" target="Xc45zE0VW1UVSJ1MskZp-40">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-66" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="550" y="400" width="214" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry width="214" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-23" value="worker 已 listening" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="7" y="40" width="87" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-27" value="发送 PID 给reload process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="7" y="90" width="87" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-66" source="Xc45zE0VW1UVSJ1MskZp-23" target="Xc45zE0VW1UVSJ1MskZp-27">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-26" value="listening event" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="57" y="10" width="100" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-29" value="所有新 worker 已 listening" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="120.5" y="40" width="87" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-30" value="退出所有旧的 worker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="121" y="90" width="87" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-66" source="Xc45zE0VW1UVSJ1MskZp-29" target="Xc45zE0VW1UVSJ1MskZp-30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-64" value="发送重启成功的消息给 reload process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Xc45zE0VW1UVSJ1MskZp-66">
+          <mxGeometry x="120.5" y="150" width="87" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="Xc45zE0VW1UVSJ1MskZp-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Xc45zE0VW1UVSJ1MskZp-66" source="Xc45zE0VW1UVSJ1MskZp-30" target="Xc45zE0VW1UVSJ1MskZp-64">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
